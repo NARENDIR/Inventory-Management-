@@ -18,4 +18,4 @@ The objective of this microservice is to enhance proficiency in developing micro
 
 1. Clone the repository:
    ```bash
-   git clone <repository_url>
+   git clone https://github.com/NARENDIR/project.git
