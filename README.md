@@ -19,3 +19,55 @@ The objective of this microservice is to enhance proficiency in developing micro
 1. Clone the repository:
    ```bash
    git clone https://github.com/NARENDIR/project.git
+
+Navigate to the project directory:
+cd inventory-management
+
+Build the project using Maven:
+mvn clean install
+
+Run the application:
+java -jar target/inventory-management-microservice.jar
+
+API Endpoints
+Adding a new inventory item
+URL: /inventory/add
+Method: POST
+
+
+Request Body:
+
+{
+  "name": "Product A",
+  "description": "Description for Product A",
+  "stockLevel": 100
+}
+Response:
+Status Code: 201 Created
+Response Body:
+
+{
+  "id": 1,
+  "name": "Product A",
+  "description": "Description for Product A",
+  "stockLevel": 100
+}
+
+
+Batch Processing
+To trigger batch processing for bulk updates, use the following endpoint:
+
+URL: /inventory/batch-process
+Method: POST
+Request Body: CSV file containing inventory updates.
+
+
+API Documentation
+The API is documented using Swagger. You can access the Swagger UI at http://localhost:8080/swagger-ui.html.
+
+Technologies Used
+Spring Boot
+Spring Data JPA
+Spring Batch
+MySQL 
+Swagger
